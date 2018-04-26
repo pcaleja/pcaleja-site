@@ -1,0 +1,32 @@
+$breakpoints: (
+  default: 0,
+  xxs: 480px,
+  xs: 769px,
+  sm: 992px,
+  md: 1200px,
+  lg: 1441px
+);
+
+@mixin breakpoint($point) {
+  @media only screen and (min-width: map-get($breakpoints, $point)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-retina() {
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @content;
+  }
+}
+
+@mixin breakpoint-override($start, $end) {
+  @media only screen and (min-width: map-get($breakpoints, $start)) and (max-width: map-get($breakpoints, $end) - 1) {
+    @content;
+  }
+}
+
+@mixin breakpoint-devices() {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1366px) {
+    @content;
+  }
+}

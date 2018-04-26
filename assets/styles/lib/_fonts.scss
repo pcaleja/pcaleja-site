@@ -1,0 +1,73 @@
+$base-font-size: 16;
+
+@mixin font-size-convert($px) {
+  font-size: $px + px;
+  font-size: $px / $base-font-size + rem;
+}
+
+@mixin font-size($base, $xxs:null, $xs:null, $sm:null, $md:null, $lg:null) {
+  $font-size-args: $xxs, $xs, $sm, $md, $lg;
+  $font-size-bp: xxs, xs, sm, md, lg;
+  @include font-size-convert($base);
+  @for $i from 1 through length($font-size-args) {
+    @if nth($font-size-args, $i) {
+      @include breakpoint(nth($font-size-bp, $i)) {
+        @include font-size-convert(nth($font-size-args, $i));
+      }
+    }
+  }
+}
+
+@mixin font-highlight($text-color, $bg-color) {
+  line-height: 1;
+  text-transform: uppercase;
+  color: $text-color;
+
+  > span {
+    position: relative;
+    box-decoration-break: clone;
+    padding: 0 0.25rem;
+    line-height: 0;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,0) 70%,
+                $bg-color 70%,
+                $bg-color 85%,
+                rgba(0,0,0,0) 85%,
+                rgba(0,0,0,0) 100%);
+  }
+}
+
+@mixin field-input-placeholder() {
+
+  ::-webkit-input-placeholder {
+    @content;
+  }
+
+  :-moz-placeholder {
+    @content;
+  }
+
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+
+%font-base {
+  font-size: $base-font-size + px;
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+%font-merriweather-sans {
+  font-family: 'Merriweather Sans', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+%font-oswald {
+  font-family: 'Oswald', Helvetica, sans-serif;
+  font-weight: 400;
+}

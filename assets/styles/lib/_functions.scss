@@ -1,0 +1,8 @@
+@function list-contains($list, $val) {
+  @for $i from 1 through length($list) {
+    @if nth($list, $i) == $val {
+      @return true;
+    }
+  }
+  @return false;
+}

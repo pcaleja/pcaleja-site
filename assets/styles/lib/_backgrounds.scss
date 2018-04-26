@@ -1,0 +1,122 @@
+@mixin background($file, $hide...) {
+  $background-list: if(length($hide) > 0, $hide, null);
+  $background-ext: -xs, -sm, null;
+  $background-bp: xxs, xs, sm;
+  $background-hide: xs, sm, md;
+  background-image: url(~/assets/images/#{$file}-xxs.jpg);
+
+  @if list-contains($background-list, xxs) {
+    background-image: none;
+  }
+
+  @for $i from 1 through length($background-bp) {
+    @include breakpoint(nth($background-bp, $i)) {
+      background-image: url(~/assets/images/#{$file}#{nth($background-ext, $i)}.jpg);
+      @if list-contains($background-list, nth($background-hide, $i)) {
+        background-image: none;
+      }
+    }
+  }
+
+  @include breakpoint-retina() {
+    background-image: url(~/assets/images/#{$file}-xxs-@2x.jpg);
+    @if list-contains($background-list, xxs) {
+      background-image: none;
+    }
+    @for $i from 1 through length($background-bp) {
+      @include breakpoint(nth($background-bp, $i)) {
+        background-image: url(~/assets/images/#{$file}#{nth($background-ext, $i)}-@2x.jpg);
+        @if list-contains($background-list, nth($background-hide, $i)) {
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
+@mixin background-half($file, $hide...) {
+  $background-half-list: if(length($hide) > 0, $hide, null);
+  $background-half-hide: xxs, xs, sm, md, lg;
+  background-image: url(~/assets/images/#{$file}.jpg);
+
+  @for $i from 1 through length($background-half-hide) {
+    @if nth($background-half-hide, $i) == lg {
+      @if list-contains($background-half-list, lg) {
+        @include breakpoint(lg) {
+          background-image: none;
+        }
+      }
+    }
+    @elseif list-contains($background-half-list, nth($background-half-hide, $i)) {
+      @include breakpoint-override(nth($background-half-hide, $i), nth($background-half-hide, $i + 1)) {
+        background-image: none;
+      }
+    }
+  }
+
+  @include breakpoint-retina() {
+    background-image: url(~/assets/images/#{$file}-@2x.jpg);
+    @for $i from 1 through length($background-half-hide) {
+      @if nth($background-half-hide, $i) == lg {
+        @if list-contains($background-half-list, lg) {
+          @include breakpoint(lg) {
+            background-image: none;
+          }
+        }
+      }
+      @elseif list-contains($background-half-list, nth($background-half-hide, $i)) {
+        @include breakpoint-override(nth($background-half-hide, $i), nth($background-half-hide, $i + 1)) {
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
+@mixin background-size($default, $xxs:null, $xs:null, $sm:null, $md:null, $lg:null) {
+  $background-size-args: $xxs, $xs, $sm, $md, $lg;
+  $background-size-bp: xxs, xs, sm, md, lg;
+  background-size: $default;
+  @for $i from 1 through length($background-size-args) {
+    @if nth($background-size-args, $i) {
+      @include breakpoint(nth($background-size-bp, $i)) {
+        background-size: (nth($background-size-args, $i));
+      }
+    }
+  }
+
+  @include breakpoint-retina() {
+    background-size: $default;
+    @for $i from 1 through length($background-size-args) {
+      @if nth($background-size-args, $i) {
+        @include breakpoint(nth($background-size-bp, $i)) {
+          background-size: (nth($background-size-args, $i));
+        }
+      }
+    }
+  }
+}
+
+@mixin background-position($default, $xxs:null, $xs:null, $sm:null, $md:null, $lg:null) {
+  $background-position-args: $xxs, $xs, $sm, $md, $lg;
+  $background-position-bp: xxs, xs, sm, md, lg;
+  background-position: $default;
+  @for $i from 1 through length($background-position-args) {
+    @if nth($background-position-args, $i) {
+      @include breakpoint(nth($background-position-bp, $i)) {
+        background-position: (nth($background-position-args, $i));
+      }
+    }
+  }
+
+  @include breakpoint-retina() {
+    background-position: $default;
+    @for $i from 1 through length($background-position-args) {
+      @if nth($background-position-args, $i) {
+        @include breakpoint(nth($background-position-bp, $i)) {
+          background-position: (nth($background-position-args, $i));
+        }
+      }
+    }
+  }
+}
