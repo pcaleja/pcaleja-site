@@ -7044,9 +7044,9 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vue-carousel@^0.7.3:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/vue-carousel/-/vue-carousel-0.7.3.tgz#5febab5bb3be4bd12ada37df22efd189f8789465"
+vue-carousel@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/vue-carousel/-/vue-carousel-0.11.0.tgz#0e2f04abb9f21e3be09def069bc28f03b9f3bf7a"
 
 vue-form@^4.5.2:
   version "4.5.2"
