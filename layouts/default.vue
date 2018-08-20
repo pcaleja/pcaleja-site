@@ -4,8 +4,8 @@
     :class='{"layout--nav-toggled": navToggled}'
   )
 
-    div(class='layout__logo' v-if='screen')
-      vue-logo(v-if='screen.width < 769')
+    header(class='layout__header--mobile')
+      vue-logo
       button(
         class='c-navigation-toggle'
         @click='navToggled = !navToggled'
@@ -14,8 +14,8 @@
         span
         span
 
-    header(class='layout__header' v-if='screen')
-      vue-logo(v-if='screen.width >= 769')
+    header(class='layout__header--desktop')
+      vue-logo
       vue-navigation
 
     div(class='layout__content')
@@ -151,26 +151,37 @@
     }
 
     &__header {
-      text-align: center;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      padding: 2rem;
-      box-sizing: border-box;
-      transform: translateX(100%);
-      transition: 0.4s ease transform;
-      background: $light-off-1;
-      z-index: 2;
 
-      @include breakpoint(xs) {
-        width: 270px;
-        transform: translateX(0);
+      &--mobile {
+        padding: 1rem;
+
+        @include breakpoint(xs) {
+          display: none;
+        }
       }
 
-      @include breakpoint(lg) {
-        right: calc(100% - 1440px);
+      &--desktop {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+        transform: translateX(100%);
+        transition: 0.4s ease transform;
+        background: $light-off-1;
+        z-index: 2;
+
+        @include breakpoint(xs) {
+          width: 270px;
+          transform: translateX(0);
+        }
+
+        @include breakpoint(lg) {
+          right: calc(100% - 1440px);
+        }
       }
     }
 
@@ -190,7 +201,7 @@
       overflow: hidden;
     }
 
-    &--nav-toggled &__header {
+    &--nav-toggled &__header--desktop {
       transform: translateX(0);
     }
 

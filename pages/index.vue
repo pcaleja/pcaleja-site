@@ -43,9 +43,9 @@
         no-ssr
           vue-carousel(
             autoplay
-            autoplayTimeout='3000'
+            :autoplay-timeout='3000'
             loop
-            :perPage='1'
+            :per-page='1'
           )
             vue-slide
               a(
