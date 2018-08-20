@@ -45,7 +45,7 @@
             autoplay
             autoplayTimeout='3000'
             loop
-            perPage='1'
+            :perPage='1'
           )
             vue-slide
               a(
@@ -155,10 +155,6 @@
           {
             content: 'By failing to prepare, you are preparing to fail.',
             source: 'https://www.brainyquote.com/quotes/benjamin_franklin_138217'
-          },
-          {
-            content: 'There’s no test like production.',
-            source: 'https://fortrabbit.github.io/quotes/'
           }
         ]
       }
@@ -174,7 +170,6 @@
     &__about {
       @extend %flex;
       @extend %middle;
-      background: $primary;
       padding: 0 1rem;
       position: relative;
       min-height: 300px;
@@ -204,6 +199,7 @@
         @extend %col-12;
         @extend %col-xs-8;
         color: $primary-dark;
+        padding: 0;
       }
     }
 
@@ -280,7 +276,7 @@
             counter-increment: li;
             position: absolute;
             left: -35px;
-            background: $primary;
+            background: $secondary;
             width: 25px;
             height: 25px;
             text-align: center;

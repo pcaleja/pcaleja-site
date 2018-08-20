@@ -57,7 +57,7 @@
     @extend %font-oswald;
     @include font-size(36);
     text-transform: uppercase;
-    color: $light;
+    color: $primary;
     margin: 0;
     line-height: 1.2;
   }
@@ -67,7 +67,7 @@
     @include font-size(18);
     font-weight: 300;
     text-transform: uppercase;
-    color: $light;
+    color: $dark-off-2;
     margin: 0;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -90,11 +90,12 @@
   }
 
   a {
-    color: $primary;
+    color: $secondary;
+    text-decoration: none;
 
     &:hover,
     &:active {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 
@@ -160,7 +161,7 @@
       box-sizing: border-box;
       transform: translateX(100%);
       transition: 0.4s ease transform;
-      background: $light;
+      background: $light-off-1;
       z-index: 2;
 
       @include breakpoint(xs) {

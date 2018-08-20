@@ -9,10 +9,6 @@
 
       //- li(class='c-nav__items')
       //-   router-link(to='/articles') Articles
-
-      li(class='c-nav__items')
-        router-link(to='/contact') Contact
-
 </template>
 
 <script>
@@ -30,6 +26,7 @@
 
     &__wrapper {
       padding: 0;
+      list-style: none;
     }
 
     li {

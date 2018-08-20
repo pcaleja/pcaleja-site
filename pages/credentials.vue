@@ -2,7 +2,7 @@
   div(class='p-credentials')
     section(class='p-credentials__toolkit')
       div
-        h1 Credentials &amp; Toolkits
+        h1 Tooling &amp; Credentials
 
         ul
           li Machine: Macbook Pro
@@ -72,7 +72,7 @@
               {
                 label: 'JavaScript',
                 capabilities: [
-                  'Understanding of ES5 and ES6 concepts, capabilities and nuances to use it effeciently',
+                  'Understanding of ES5 and ES6 concepts, capabilities and nuances to use it effectively',
                   'Able to use Nuxt.js Framework to get a Vue based static site or SPA started quickly',
                   'Understanding of Node.js to create cloudbased functions which works well when building dynamic functionalities for static sites',
                   'Experience setting up bundlers and task runners to automate workflows',
@@ -228,7 +228,6 @@
     &__toolkit {
       @extend %flex;
       @extend %middle;
-      background: $primary;
       padding: 0 1rem;
       position: relative;
       min-height: 300px;
@@ -249,7 +248,7 @@
 
     &__skills,
     &__experiences {
-      background: $dark-off-1;
+      color: $primary-dark;
       padding: 2rem 1rem;
 
       &__wrapper {
