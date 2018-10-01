@@ -1,19 +1,32 @@
 <template lang='pug'>
   nav(class='c-nav')
     ul(class='c-nav__wrapper')
-      li(class='c-nav__items')
-        router-link(to='/') Home
-
-      li(class='c-nav__items')
-        router-link(to='/credentials') Skills
-
-      //- li(class='c-nav__items')
-      //-   router-link(to='/articles') Articles
+      li(
+        class='c-nav__items'
+        v-for='link in links'
+      )
+        span(@click='$store.commit("navigation/close")')
+          router-link(
+            :to='link.route'
+          ) {{ link.label }}
 </template>
 
 <script>
   export default {
-
+    data () {
+      return {
+        links: [
+          {
+            label: 'Home',
+            route: '/'
+          },
+          {
+            label: 'Skills',
+            route: '/credentials'
+          }
+        ]
+      }
+    }
   }
 </script>
 

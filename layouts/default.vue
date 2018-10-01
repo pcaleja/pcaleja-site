@@ -1,14 +1,14 @@
 <template lang='pug'>
   div(
     class='layout'
-    :class='{"layout--nav-toggled": navToggled}'
+    :class='{"layout--nav-toggled": $store.state.navigation.is_toggled }'
   )
 
     header(class='layout__header--mobile')
       vue-logo
       button(
         class='c-navigation-toggle'
-        @click='navToggled = !navToggled'
+        @click='$store.commit("navigation/toggle")'
       )
         span
         span

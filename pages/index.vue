@@ -5,7 +5,7 @@
         img(src='/photo-philip-caleja.jpg' alt='Philip Caleja')
 
       div(class='p-home__about__content')
-        h1 About Philip Caleja
+        h1 About Me
         h2 Web Developer &amp; Designer looking for freelance opportunities
 
         p Hello! I’m a Web Developer currently working full time. I’m looking for small to medium sized side projects to work on after hours for additional income.
