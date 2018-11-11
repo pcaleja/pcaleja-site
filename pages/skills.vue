@@ -47,5 +47,11 @@
         margin-bottom: 0.5rem;
       }
     }
+
+    @media print {
+      h3 {
+        color: $primary;
+      }
+    }
   }
 </style>

@@ -161,5 +161,11 @@
     &__skill {
       margin-bottom: 2rem;
     }
+
+    @media print {
+      &__category {
+        border-color: $primary;
+      }
+    }
   }
 </style>

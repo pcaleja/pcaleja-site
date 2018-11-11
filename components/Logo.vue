@@ -21,11 +21,11 @@
     &__name {
       @extend %font-oswald;
       @include font-size(36);
+      @include font-highlight($dark-off-1, $primary-light);
       text-transform: uppercase;
       color: $dark-off-1;
       margin: 0;
       line-height: 1.2;
-      @include font-highlight($dark-off-1, $primary-light);
     }
 
     &__job {
@@ -36,6 +36,12 @@
       color: $dark-off-1;
       margin: 0;
       line-height: 1.2;
+    }
+
+    @media print {
+      &__name {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 </style>

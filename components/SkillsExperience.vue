@@ -57,7 +57,7 @@
                     ]
                   },
                   {
-                    header: 'I assisted in the design, built and maintained their websites.',
+                    header: 'I assisted in the design and built their websites.',
                     subheader: '(www.flynyon.com, www.newyorkonair.com, www.flyfoxtrot.com, back office dashboard)',
                     examples: [
                       'Technologies used to build these websites includes HTML (PUG), CSS (SCSS) and JavaScript (Vue.js/Nuxt.js).',
@@ -217,6 +217,12 @@
       @include font-size(20);
       color: $light;
       margin-bottom: 0;
+    }
+
+    @media print {
+      &__year {
+        border-color: $primary;
+      }
     }
   }
 </style>
