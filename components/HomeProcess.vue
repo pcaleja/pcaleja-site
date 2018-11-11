@@ -31,23 +31,23 @@
       return {
         steps: [
           {
-            header: 'Gather Requirments',
+            header: 'Gather Requirements',
             content: [
               'Before any work starts, the scope needs to be defined.',
-              'This will help us manage deliverables and expectations.'
+              'This will help manage deliverables and expectations.'
             ]
           },
           {
             header: 'Plan and Schedule',
             content: [
               'Defining a schedule allows me to be aligned with business goals.',
-              'By doing so, we can prioritize high impact tasks first.'
+              'By doing so, high impact tasks first can be prioritized first.'
             ]
           },
           {
             header: 'Mock Up and Review',
             content: [
-              'This is the phase when we draft the ideas discussed.',
+              'This is the phase when we draft the ideas.',
               'This makes sure that we have a mutual understanding of the direction of the project.'
             ]
           },
@@ -55,21 +55,21 @@
             header: 'Design and Develop',
             content: [
               'With a plan in place, execution can begin. Design will define the visuals of the project and Development is the process of building it.',
-              'It usually cycles like for refinement Design > Develop > Iterate.'
+              'Design > Develop > Iterate.'
             ]
           },
           {
             header: 'Review and Revise',
             content: [
               'Getting it right the first time hardly happens. This gives everyone a chance to catch crucial bugs.',
-              'This phase usually cycles until everyone satisfied with the end result.'
+              'This phase usually cycles until everyone is satisfied with the end result.'
             ]
           },
           {
             header: 'Deliver and Monitor',
             content: [
               'Congratulations! Your project is delivered. But we\'re not quite done yet.',
-              'Let’s take this time to monitor and make new plans to make it even better!'
+              'Let\'s take this time to monitor and make new plans to make it even better!'
             ]
           }
         ],
