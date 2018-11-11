@@ -79,7 +79,12 @@
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 1rem;
-    line-height: 1.2
+    line-height: 1.2;
+    color: $primary;
+  }
+
+  h4 {
+    color: $primary;
   }
 
   h4, p {
@@ -100,7 +105,7 @@
   }
 
   b, strong {
-    font-weight: 600;
+    font-weight: 400;
   }
 
   blockquote, cite, q {

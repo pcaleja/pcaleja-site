@@ -22,7 +22,7 @@
           },
           {
             label: 'Skills',
-            route: '/credentials'
+            route: '/skills'
           }
         ]
       }

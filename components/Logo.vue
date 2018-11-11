@@ -1,7 +1,7 @@
 <template lang='pug'>
   div(class='c-logo')
     div(class='c-logo__name'): span Philip Caleja
-    div(class='c-logo__job') Web Developer &amp; Designer
+    div(class='c-logo__job') Front End Web Developer
 </template>
 
 <script>
@@ -25,12 +25,12 @@
       color: $dark-off-1;
       margin: 0;
       line-height: 1.2;
-      @include font-highlight($dark-off-1, $primary);
+      @include font-highlight($dark-off-1, $primary-light);
     }
 
     &__job {
       @extend %font-oswald;
-      @include font-size(18);
+      @include font-size(19);
       font-weight: 300;
       text-transform: uppercase;
       color: $dark-off-1;

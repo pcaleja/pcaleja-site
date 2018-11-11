@@ -4,7 +4,7 @@
       class='c-form'
       :name='formName'
       netlify
-      netlify-honeypot='bot-field'
+      netlify-honeypot='zipcode'
       @submit.prevent='handleSubmit()'
       :state='formState'
       v-if='!isSubmitted'
@@ -21,7 +21,7 @@
       div
         input(
           v-show='false'
-          name='bot-field'
+          name='zipcode'
         )
 
       div(class='c-form__item')
@@ -59,30 +59,6 @@
           field-messages(
             class='c-form__error'
             name='email'
-          )
-            div(slot='required') This field is required
-
-      div(class='c-form__item')
-        validate
-          label(
-            class='c-form__label'
-            v-show='state.service'
-          ) Service
-          select(
-            :style='{ color: computedSelectColor }'
-            @change='handleSelectChange($event)'
-            name='service'
-            v-model='state.service'
-            required
-          )
-            option(disabled selected value='') Service
-            option(value='Web Design') Web Design
-            option(value='Web Development') Web Development
-            option(value='Web Design and Developemtn') Web Design and Development
-
-          field-messages(
-            class='c-form__error'
-            name='service'
           )
             div(slot='required') This field is required
 
@@ -132,23 +108,12 @@
         state: {
           email: '',
           name: '',
-          service: '',
           message: ''
         }
       }
     },
 
-    computed: {
-      computedSelectColor () {
-        return this.onChangeColor
-      }
-    },
-
     methods: {
-      handleSelectChange ($event) {
-        this.onChangeColor = '#FFFFFF'
-      },
-
       handleSubmit () {
         if (this.formState.$invalid) return
         axios('/', {
@@ -163,10 +128,6 @@
         return Object.keys(data)
           .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
           .join('&')
-      },
-
-      setPartyMemberField (num) {
-        return `pm_${num}`
       }
     }
   }
@@ -176,7 +137,6 @@
   @import '~assets/styles/lib';
 
   .c-form {
-    max-width: 340px;
     margin: auto;
     text-align: center;
 
@@ -228,15 +188,15 @@
       @extend %font-merriweather-sans;
       @include font-size(14);
       width: 100%;
-      padding: 0.25rem;
+      padding: 0.5rem;
       appearance: none;
       box-sizing: border-box;
       outline: 0;
-      border: 0;
-      border-bottom: 1px solid $light;
+      border: 1px solid $light;
       background: transparent;
-      border-radius: 0;
-      color: $light;
+      border-radius: 5px;
+      color: $dark-off-2;
+      background: $light;
 
       &:focus {
         border-color: lighten($primary, 25%);
@@ -253,10 +213,6 @@
         transition: background-color 5000s ease-in-out 0s;
         border-color: lighten($primary, 25%);
       }
-    }
-
-    textarea {
-      border: 1px solid $light;
     }
 
     select {

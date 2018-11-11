@@ -25,6 +25,7 @@ module.exports = {
   ],
 
   modules: [
-    '~/modules/eslint'
+    '~/modules/eslint',
+    '~/modules/favicon'
   ]
 }
