@@ -223,6 +223,11 @@
       &__year {
         border-color: $primary;
       }
+
+      h4 {
+        font-size: 14px;
+        color: $dark;
+      }
     }
   }
 </style>

@@ -57,6 +57,17 @@
     @media print {
       h3 {
         color: $primary;
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 12px;
+        color: $dark;
+      }
+
+      li {
+        font-size: 12px;
+        color: $dark-off-1;
       }
     }
 
