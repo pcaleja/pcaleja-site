@@ -16,9 +16,6 @@
             div(class='c-home-samples__slide__content')
               a(:href='slide.link'): strong {{ slide.link }}
               p(class='c-home-samples__slide__description') {{ slide.description }}
-              h4: strong Responsibilities
-              ul
-                li(v-for='responsibility in slide.responsibilities') {{ responsibility}}
 
             div(class='c-home-samples__slide__image')
               a(
@@ -29,13 +26,18 @@
                 figure
                   img(:src='slide.image')
 
-            div(class='c-home-samples__slide__tech-stack')
-              h4: strong Tech Stack
-              dl
-                template(v-for='tech in slide.technologies')
-                  dt {{ tech.label }}
-                  dd {{ tech.value }}
+            div(class='c-home-samples__slide__additional-info')
+              div(class='c-home-samples__slide__tech-stack')
+                h4: strong Tech Stack
+                dl
+                  template(v-for='tech in slide.technologies')
+                    dt {{ tech.label }}
+                    dd {{ tech.value }}
 
+              div(class='c-home-samples__slide__responsibilities')
+                h4: strong Responsibilities
+                ul
+                  li(v-for='responsibility in slide.responsibilities') {{ responsibility}}
 </template>
 
 <script>
@@ -214,11 +216,6 @@
 
       &__image {
         @extend %col-12;
-        @extend %col-xs-8;
-
-        @include breakpoint(xs) {
-          order: 2;
-        }
       }
 
       &__content {
@@ -226,10 +223,14 @@
         color: $dark-off-2;
       }
 
-      &__tech-stack {
-        @include font-size(12);
+      &__additional-info {
+        @extend %flex;
+      }
+
+      &__tech-stack,
+      &__responsibilities {
         @extend %col-12;
-        @extend %col-xs-4;
+        @extend %col-xs-6;
         color: $dark-off-2;
         margin-top: 1rem;
       }
@@ -241,6 +242,10 @@
       ul,
       dl {
         margin-top: 0.5rem;
+      }
+
+      ul {
+        padding-left: 1rem;
       }
     }
 
