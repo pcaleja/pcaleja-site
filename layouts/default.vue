@@ -123,6 +123,18 @@
     line-height: 0;
   }
 
+  dl {
+
+    dt {
+      font-weight: 400;
+    }
+
+    dd {
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
   .c-list {
     padding-left: 1rem;
     list-style: none;
