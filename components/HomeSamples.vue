@@ -91,6 +91,37 @@
             ]
           },
           {
+            link: '/case-studies/nyonair-dashboard',
+            image: '/screen-nyon-dash-flights.jpg',
+            description: 'The NYON Dash is the internal admin dashboard used by staff to manage flights, products, orders, discounts, etc..',
+            responsibilities: [
+              'Designed and built all the views',
+              'Maintain and add features per business requirement'
+            ],
+            technologies: [
+              {
+                label: 'JavaScript Framework',
+                value: 'Vue.js/Nuxt.js'
+              },
+              {
+                label: 'Templating Engine',
+                value: 'PUG'
+              },
+              {
+                label: 'CSS Preprocessor',
+                value: 'SCSS'
+              },
+              {
+                label: 'Hosting',
+                value: 'Netlify'
+              },
+              {
+                label: 'Backend',
+                value: 'Ruby on Rails hosted in Heroku'
+              }
+            ]
+          },
+          {
             link: 'https://www.flyfoxtrot.com',
             image: '/screen-foxtrot-homepage.jpg',
             description: 'FlyFoxtrot is an e-commerce website that sells charter helicopter flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',

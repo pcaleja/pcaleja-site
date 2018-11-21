@@ -1,6 +1,6 @@
 <template lang='pug'>
   div(class='c-logo')
-    div(class='c-logo__wrapper')
+    router-link(class='c-logo__wrapper' to='/')
       div(class='c-logo__name'): span Philip Caleja
       div(class='c-logo__job') Front End Web Developer
 
@@ -23,6 +23,10 @@
       color: $dark-off-1;
       display: inline-block;
       text-align: center;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     &__name {
