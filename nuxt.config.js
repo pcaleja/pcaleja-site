@@ -25,7 +25,12 @@ module.exports = {
   ],
 
   modules: [
+    '@nuxtjs/google-analytics',
     '~/modules/eslint',
     '~/modules/favicon'
-  ]
+  ],
+
+  'google-analytics': {
+    id: 'UA-40892343-1'
+  }
 }
