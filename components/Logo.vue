@@ -18,6 +18,7 @@
   @import '~assets/styles/lib';
 
   .c-logo {
+    transition: 0.4s ease transform;
 
     &__wrapper {
       color: $dark-off-1;

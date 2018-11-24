@@ -3,20 +3,10 @@
     class='layout'
     :class='{"layout--nav-toggled": $store.state.navigation.is_toggled }'
   )
-
-    header(class='layout__header--mobile')
-      vue-logo
-      button(
-        class='c-navigation-toggle'
-        @click='$store.commit("navigation/toggle")'
-      )
-        span
-        span
-        span
-
-    header(class='layout__header--desktop')
+    header(class='layout__header')
       vue-logo
       vue-navigation
+      vue-navigation-toggle
 
     main(class='layout__content')
       nuxt
@@ -25,16 +15,13 @@
 <script>
   import VueLogo from '~/components/Logo.vue'
   import VueNavigation from '~/components/Navigation.vue'
+  import VueNavigationToggle from '~/components/NavigationToggle.vue'
+
   export default {
     components: {
       VueLogo,
-      VueNavigation
-    },
-
-    data () {
-      return {
-        navToggled: false
-      }
+      VueNavigation,
+      VueNavigationToggle
     }
   }
 </script>
@@ -51,6 +38,12 @@
     position: relative;
     color: $light;
     line-height: 1.4;
+  }
+
+  a, button {
+    &:focus {
+      outline: 1px dotted $secondary;
+    }
   }
 
   h1 {
@@ -168,16 +161,9 @@
     }
 
     &__header {
+      padding: 1rem;
 
-      &--mobile {
-        padding: 1rem;
-
-        @include breakpoint(xs) {
-          display: none;
-        }
-      }
-
-      &--desktop {
+      @include breakpoint(xs) {
         text-align: center;
         position: fixed;
         top: 0;
@@ -190,15 +176,12 @@
         transition: 0.4s ease transform;
         background: $light-off-1;
         z-index: 2;
+        width: 270px;
+        transform: translateX(0);
+      }
 
-        @include breakpoint(xs) {
-          width: 270px;
-          transform: translateX(0);
-        }
-
-        @include breakpoint(lg) {
-          right: calc(100% - 1440px);
-        }
+      @include breakpoint(lg) {
+        right: calc(100% - 1440px);
       }
     }
 
@@ -218,50 +201,13 @@
       overflow: hidden;
     }
 
-    &--nav-toggled &__header--desktop {
+    &--nav-toggled .c-nav {
       transform: translateX(0);
     }
 
-    &--nav-toggled &__content {
+    &--nav-toggled &__content,
+    &--nav-toggled .c-logo {
       transform: translateX(-100%);
-    }
-  }
-
-  .c-navigation-toggle {
-    @extend %button-unstyle;
-    @extend %flex;
-    @extend %column;
-    @extend %middle;
-    @extend %center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    outline: none;
-    background: $dark;
-    width: 2rem;
-    height: 55px;
-    cursor: pointer;
-
-    @include breakpoint(xs) {
-      display: none;
-    }
-
-    &:focus {
-      background: $dark;
-    }
-
-    &:hover,
-    &:active {
-      background: $secondary;
-    }
-
-    span {
-      width: 5px;
-      height: 5px;
-      background: $light;
-      border-radius: 50%;
-      margin: 3px 0;
     }
   }
 </style>

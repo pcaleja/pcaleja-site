@@ -197,18 +197,18 @@
       appearance: none;
       box-sizing: border-box;
       outline: 0;
-      border: 1px solid $light;
+      border: 2px solid $light;
       background: transparent;
       border-radius: 5px;
       color: $dark-off-2;
       background: $light;
 
       &:focus {
-        border-color: lighten($primary, 25%);
+        border-color: lighten($secondary, 25%);
       }
 
       &:hover {
-        border-color: $primary;
+        border-color: $secondary;
       }
 
       &:-webkit-autofill,
