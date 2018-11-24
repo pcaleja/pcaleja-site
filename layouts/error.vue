@@ -1,7 +1,7 @@
 <template lang='pug'>
   div(class='p-error')
-    h1 Whomp whomp, {{ error.statusCode }} Error
-    h3 {{ error.message }}
+    h1(class='h1') Whomp whomp, {{ error.statusCode }} Error
+    h3(class='h3') {{ error.message }}
 </template>
 
 <script>

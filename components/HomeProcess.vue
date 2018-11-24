@@ -1,6 +1,6 @@
 <template lang='pug'>
   section(class='c-home-process')
-    h3 My Process
+    h2(class='h3') My Process
 
     p(class='c-home-process__subheader') Having a process is essential for any project. It allows expectations to be managed and improves the quality of the end result.
 
@@ -12,7 +12,7 @@
           :key='index'
         )
           div(class='c-home-process__content__wrapper')
-            h4 {{ step.header }}
+            h3(class='h4') {{ step.header }}
             p(v-for='paragraph in step.content') {{ paragraph }}
             span(class='c-home-process__content__step__v-line')
             span(class='c-home-process__content__step__h-line')

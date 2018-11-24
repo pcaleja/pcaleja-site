@@ -46,7 +46,7 @@
     }
   }
 
-  h1 {
+  .h1 {
     @extend %font-oswald;
     @include font-size(36);
     text-transform: uppercase;
@@ -55,7 +55,7 @@
     line-height: 1.2;
   }
 
-  h2 {
+  .h2 {
     @extend %font-oswald;
     @include font-size(18);
     font-weight: 300;
@@ -66,21 +66,25 @@
     margin-bottom: 1rem;
   }
 
-  h3 {
+  .h3 {
     @extend %font-oswald;
     @include font-size(24);
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 1rem;
     line-height: 1.2;
-    color: $primary;
   }
 
-  h4 {
-    color: $primary;
+  .h4 {
+
   }
 
-  h4, p {
+  .h5 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .h4, p {
     @extend %font-merriweather-sans;
     @include font-size(16);
     margin: 0;

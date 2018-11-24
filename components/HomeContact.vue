@@ -1,7 +1,7 @@
 <template lang='pug'>
   section(class='c-home-contact')
     div(class='c-home-contact__item')
-      h3 Like what you see?
+      h2(class='h3') Like what you see?
       p: em Reach out and let's create something awesome!
       vue-form
 </template>
@@ -23,7 +23,7 @@
     padding: 2rem;
     background: $primary;
 
-    h3 {
+    .h3 {
       color: $light;
     }
   }

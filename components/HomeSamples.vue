@@ -1,6 +1,6 @@
 <template lang='pug'>
   section(class='c-home-samples')
-    h3 Samples
+    h2(class='h3') Samples
     no-ssr
       vue-carousel(
         autoplay
@@ -28,7 +28,7 @@
 
             div(class='c-home-samples__slide__additional-info')
               div(class='c-home-samples__slide__tech-stack')
-                h4: strong Tech Stack
+                h3(class='h4'): strong Tech Stack
                 dl
                   template(v-for='tech in slide.technologies')
                     dt {{ tech.label }}

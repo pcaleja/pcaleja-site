@@ -1,18 +1,18 @@
 <template lang='pug'>
   section(class='c-skills-skills')
-    h3 Skills
+    h2(class='h3') Skills
     div(
       v-for='(skill, index) in skills'
       :key='index'
       class='c-skills-skills__category'
     )
-      div(class='c-skills-skills__category__label') {{ skill.label }}
+      h3(class='h4')(class='c-skills-skills__category__label') {{ skill.label }}
       div(
         v-for='(item, index) in skill.items'
         :key='index'
         class='c-skills-skills__skill'
       )
-        p: strong {{ item.label }}
+        h4(class='h5'): strong {{ item.label }}
         p(v-if='item.description') {{ item.description }}
         ul
           li(

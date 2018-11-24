@@ -1,6 +1,6 @@
 <template lang='pug'>
   section(class='c-skills-experience')
-    h3 Career History
+    h2(class='h3') Career History
     div(
       v-for='(year, index) in years'
       :key='index'
@@ -12,7 +12,7 @@
         :key='index'
         class='c-skills-experience__experience'
       )
-        h4 {{ experience.company }} - {{ experience.title }}
+        h3(class='h4') {{ experience.company }} - {{ experience.title }}
         p(class='c-skills-experience__experience__date') {{ experience.start_date }} to {{ experience.end_date }}
         p(class='c-skills-experience__experience__description')  {{ experience.description }}
         p: strong Achievements:
@@ -158,7 +158,7 @@
       }
     }
 
-    h4 {
+    .h4 {
       @include font-size(20);
       color: $light;
       margin-bottom: 0;
@@ -169,7 +169,7 @@
         border-color: $primary;
       }
 
-      h4 {
+      .h4 {
         font-size: 14px;
         color: $dark;
       }

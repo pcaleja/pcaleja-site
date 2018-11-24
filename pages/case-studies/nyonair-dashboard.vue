@@ -1,6 +1,6 @@
 <template lang='pug'>
   div(class='p-case-studies')
-    h1 NYON Dash
+    h1(class='h1') NYON Dash
     p The NYON Dash is the internal admin dashboard used by staff to manage flights, products, orders, discounts, etc..
 
     figure
