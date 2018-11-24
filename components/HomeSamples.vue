@@ -280,6 +280,10 @@
       }
     }
 
+    .h3 {
+      color: $primary;
+    }
+
     .c-slide-link {
       position: relative;
       display: block;
