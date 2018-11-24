@@ -7,7 +7,7 @@ module.exports = {
     htmlAttr: { lang: 'en' },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1' }
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Oswald:300,400%7CMerriweather+Sans:300,300i,400' }
