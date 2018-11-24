@@ -24,7 +24,7 @@
                 target='_blank'
               )
                 figure
-                  img(:src='slide.image')
+                  img(:src='slide.image.src' :alt='slide.image.alt')
 
             div(class='c-home-samples__slide__additional-info')
               div(class='c-home-samples__slide__tech-stack')
@@ -54,7 +54,7 @@
         slides: [
           {
             link: 'https://www.flynyon.com',
-            image: '/screen-flynyon-homepage.jpg',
+            image: {src: '/screen-flynyon-homepage.jpg', alt: 'FlyNYON Homepage'},
             description: 'FlyNYON is an e-commerce website that sells doors-off helicopter photography flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',
             responsibilities: [
               'Built and tested the UI components',
@@ -92,7 +92,7 @@
           },
           {
             link: '/case-studies/nyonair-dashboard',
-            image: '/screen-nyon-dash-flights.jpg',
+            image: {src: '/screen-nyon-dash-flights.jpg', alt: 'NYON Dash Flights'},
             description: 'The NYON Dash is the internal admin dashboard used by staff to manage flights, products, orders, discounts, etc..',
             responsibilities: [
               'Designed and built all the views',
@@ -123,7 +123,7 @@
           },
           {
             link: 'https://www.flyfoxtrot.com',
-            image: '/screen-foxtrot-homepage.jpg',
+            image: {src: '/screen-foxtrot-homepage.jpg', alt: 'Foxtrot Homepage'},
             description: 'Foxtrot is an e-commerce website that sells charter helicopter flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',
             responsibilities: [
               'Built and tested the UI components',
@@ -156,7 +156,7 @@
           },
           {
             link: 'https://www.newyorkonair.com',
-            image: '/screen-newyorkonair-homepage.jpg',
+            image: {src: '/screen-newyorkonair-homepage.jpg', alt: 'New York On Air Homepage'},
             description: 'New York On Air is an e-commerce website that sells doors-on helicopter photography flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',
             responsibilities: [
               'Assisted with the design of the UI components',
@@ -193,7 +193,7 @@
           },
           {
             link: 'https://www.shopkeep.com/blog',
-            image: '/screen-shopkeep-blog.jpg',
+            image: {src: '/screen-shopkeep-blog.jpg', alt: 'ShopKeep Blog Page'},
             description: 'The Small Business Hub is ShopKeep\'s blog channel that contains content regarding POS systems and small businesses.',
             responsibilities: [
               'Rebuilt core pages of the site using Twig templating engine',
