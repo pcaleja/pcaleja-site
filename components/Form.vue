@@ -27,10 +27,12 @@
       div(class='c-form__item')
         validate
           label(
+            for='name'
             class='c-form__label'
             v-show='state.name'
           ) Full Name
           input(
+            id='name'
             placeholder='Full Name'
             name='name'
             type='text'
@@ -46,10 +48,12 @@
       div(class='c-form__item')
         validate
           label(
+            for='email'
             class='c-form__label'
             v-show='state.email'
           ) Email
           input(
+            id='email'
             placeholder='Email'
             name='email'
             type='email'
@@ -65,10 +69,12 @@
       div(class='c-form__item')
         validate
           label(
+            for='message'
             class='c-form__label'
             v-show='state.message'
           ) Message
           textarea(
+            id='message'
             placeholder='Message'
             name='message'
             v-model='state.message'
