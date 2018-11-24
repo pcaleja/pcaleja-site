@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import VueForm from './Form.vue'
+  import VueForm from '~/components/Form.vue'
 
   export default {
     components: {

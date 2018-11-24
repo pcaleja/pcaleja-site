@@ -96,4 +96,4 @@ const metadata = (obj) => {
   return data
 }
 
-module.exports = metadata
+export default metadata

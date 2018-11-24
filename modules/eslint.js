@@ -1,6 +1,6 @@
-module.exports = function () {
-  this.extendBuild((config, { isDev, isClient }) => {
-    if (isDev && isClient) {
+export default function () {
+  this.extendBuild((config, { isDev }) => {
+    if (isDev && process.client) {
       config.module.rules.push({
         enforce: 'pre',
         test: /\.(js|vue)$/,

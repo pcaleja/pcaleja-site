@@ -1,4 +1,4 @@
-const _ = require('underscore')
+import _ from 'underscore'
 
 function setAppleIconSizes () {
   const sizes = [57, 60, 72, 76, 114, 120, 144, 152, 180]
@@ -29,6 +29,6 @@ const favicon = _.union(
   [{ rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-icon-192x192.png' }]
 )
 
-module.exports = function () {
+export default function () {
   this.options.head.link = _.union(this.options.head.link, favicon)
 }

@@ -1,10 +1,10 @@
-module.exports = {
+const config = {
   env: {
     root: process.env.ROOT || 'http://localhost:3030'
   },
   head: {
     title: 'Philip Caleja',
-    htmlAttr: { lang: 'en' },
+    htmlAttrs: { lang: 'en', foo: 'bar' },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1' }
@@ -33,5 +33,19 @@ module.exports = {
 
   'google-analytics': {
     id: 'UA-40892343-1'
+  },
+
+  build: {
+    extend (config, ctx) {
+      config.module.rules.push({
+        test: /\.pug$/,
+        loader: 'pug-plain-loader',
+        options: {
+          data: {}
+        }
+      })
+    }
   }
 }
+
+export default config
