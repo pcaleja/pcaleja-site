@@ -4,12 +4,13 @@ module.exports = {
   },
   head: {
     title: 'Philip Caleja',
+    htmlAttr: { locale: 'en' },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Oswald:300,400|Merriweather+Sans:300,300i,400' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Oswald:300,400%7CMerriweather+Sans:300,300i,400' }
     ]
   },
 

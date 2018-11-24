@@ -9,6 +9,7 @@
     img(
       class='c-home-about__graphic'
       src='/graphic-developer.svg'
+      alt='Developer Coding'
     )
 </template>
 

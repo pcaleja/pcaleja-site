@@ -71,7 +71,6 @@
           textarea(
             placeholder='Message'
             name='message'
-            type='text'
             v-model='state.message'
             rows='4'
             required

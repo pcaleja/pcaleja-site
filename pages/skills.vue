@@ -20,8 +20,17 @@
 <script>
   import VueSkillsExperience from '~/components/SkillsExperience.vue'
   import VueSkillsSkills from '~/components/SkillsSkills.vue'
+  import metadata from '~/modules/metadata.js'
 
   export default {
+    head () {
+      return metadata({
+        title: 'Skills | Philip Caleja',
+        description: 'My forte is building and improving websites aligned with business goals. In addition, I can also build internal tools or procure third party software to increase efficiency and productivity within a company.',
+        canonical: `${process.env.root}/skills`
+      })
+    },
+
     components: {
       VueSkillsExperience,
       VueSkillsSkills
