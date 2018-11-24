@@ -18,7 +18,7 @@
       vue-logo
       vue-navigation
 
-    div(class='layout__content')
+    main(class='layout__content')
       nuxt
 </template>
 
