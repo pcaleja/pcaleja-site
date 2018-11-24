@@ -7,7 +7,6 @@ const metadata = (obj) => {
     canonical,
     robots,
     bodyAttrs,
-    htmlAttrs,
     google,
     script
   } = obj
@@ -32,8 +31,7 @@ const metadata = (obj) => {
     link: [],
     script: script || [],
     __dangerouslyDisableSanitizers: ['script'],
-    bodyAttrs,
-    htmlAttrs
+    bodyAttrs
   }
 
   if (title) {

@@ -4,7 +4,7 @@ const config = {
   },
   head: {
     title: 'Philip Caleja',
-    htmlAttrs: { lang: 'en', foo: 'bar' },
+    htmlAttrs: { lang: 'en' },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1' }
