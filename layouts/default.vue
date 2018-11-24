@@ -40,6 +40,10 @@
     line-height: 1.4;
   }
 
+  *, *:before, *:after {
+    box-sizing: inherit
+  }
+
   a, button {
     &:focus {
       outline: 1px dotted $secondary;

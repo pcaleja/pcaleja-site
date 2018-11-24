@@ -29,11 +29,9 @@
           label(
             for='name'
             class='c-form__label'
-            v-show='state.name'
           ) Full Name
           input(
             id='name'
-            placeholder='Full Name'
             name='name'
             type='text'
             v-model='state.name'
@@ -50,11 +48,9 @@
           label(
             for='email'
             class='c-form__label'
-            v-show='state.email'
           ) Email
           input(
             id='email'
-            placeholder='Email'
             name='email'
             type='email'
             v-model='state.email'
@@ -71,11 +67,9 @@
           label(
             for='message'
             class='c-form__label'
-            v-show='state.message'
           ) Message
           textarea(
             id='message'
-            placeholder='Message'
             name='message'
             v-model='state.message'
             rows='4'
@@ -143,7 +137,7 @@
 
   .c-form {
     margin: auto;
-    text-align: center;
+    text-align: left;
 
     @include breakpoint(sm) {
       margin: 0;
@@ -170,21 +164,25 @@
     }
 
     &__label {
-      @include font-size(10);
-      color: $light-off-2;
-      position: absolute;
-      top: -1rem;
-      left: 0.25rem;
+      color: $light;
       white-space: nowrap;
+      margin-bottom: 0.25rem;
+      display: block;
     }
 
     &__error {
       @include font-size(12);
       text-align: left;
-      color: $danger;
+      color: $light;
       position: absolute;
-      bottom: -1.25rem;
-      right: 0.25rem;
+      top: 2px;
+      right: 0.25rem;;
+
+      div {
+        background: $danger;
+        padding: 0.25rem;
+        border-radius: 4px 4px 0 0;
+      }
     }
 
     input,
@@ -202,6 +200,7 @@
       border-radius: 5px;
       color: $dark-off-2;
       background: $light;
+      line-height: 1;
 
       &:focus {
         border-color: lighten($secondary, 25%);
