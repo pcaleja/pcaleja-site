@@ -260,5 +260,9 @@
         }
       }
     }
+
+    .h3 {
+      color: $primary;
+    }
   }
 </style>
