@@ -2,6 +2,7 @@
   button(
     class='c-navigation-toggle'
     @click='$store.commit("navigation/toggle")'
+    aria-label='menu'
   )
     span
     span
