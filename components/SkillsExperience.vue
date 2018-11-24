@@ -15,20 +15,12 @@
         h4 {{ experience.company }} - {{ experience.title }}
         p(class='c-skills-experience__experience__date') {{ experience.start_date }} to {{ experience.end_date }}
         p(class='c-skills-experience__experience__description')  {{ experience.description }}
-        div(
-          v-for='contribution in experience.contributions'
-          class='c-skills-experience__contribution'
-        )
-          p(
-            class='c-skills-experience__contribution__header'
-          ): strong {{ contribution.header }}
-          p(
-            v-if='contribution.subheader'
-            class='c-skills-experience__contribution__subheader'
-          ) {{ contribution.subheader }}
-          ul(v-if='contribution.examples')
-            li(v-for='example in contribution.examples') {{ example }}
-
+        p: strong Achievements:
+        ul
+          li(
+            v-for='contribution in experience.contributions'
+            class='c-skills-experience__contribution'
+          ) {{ contribution }}
 </template>
 
 <script>
@@ -46,43 +38,14 @@
                 end_date: 'Present',
                 description: 'NYONair is an aerial/helicopter company provides aerial photography experiences to the masses.',
                 contributions: [
-                  {
-                    header: 'I made technical decision for the company to improve workflows and reduce cost.',
-                    examples: [
-                      'Initiated and completed the migration from BitBucket and JIRA to GitLab to simplify developer workflows.',
-                      'Initiated and completed the migration from InfusionSoft to Mailchimp to reduce monthly cost and improve marketing workflows.',
-                      'Initiated and completed the migration of www.flynyon.com from a WordPress setup to a static site',
-                      'Assisted in hiring a back-end developer to build an API to be used to replace the legacy booking engine.',
-                      'Enabled the marketing team to manage content and campaigns using Contentful.'
-                    ]
-                  },
-                  {
-                    header: 'I assisted in the design and built their websites.',
-                    subheader: '(www.flynyon.com, www.newyorkonair.com, www.flyfoxtrot.com, back office dashboard)',
-                    examples: [
-                      'Technologies used to build these websites includes HTML (PUG), CSS (SCSS) and JavaScript (Vue.js/Nuxt.js).',
-                      'Tools used to design these websites include Photoshop, Illustrator and Sketch.',
-                      'I also assisted the back-end developer with coming up with solutions for new features and to improve the API.'
-                    ]
-                  },
-                  {
-                    header: 'I helped enhance reporting to provide better data for management.',
-                    examples: [
-                      'Setup Enhanced Ecommerce for Google Analytics.',
-                      'Setup DataLayer to send custom events for Google Analytics and Facebook Analytics.',
-                      'Visualized data using Google Data Studio.'
-                    ]
-                  },
-                  {
-                    header: 'I administered third-party softwares used by the company.',
-                    subheader: '(G Suite, Help Scout, Slack, Netlify, MailChimp, and Contentful)',
-                    examples: [
-                      'Managed accounts and groups for G Suite',
-                      'Managed accounts and setup integrations for Slack',
-                      'Configured Help Scout and migrated data from FreshDesk.',
-                      'Configured MailChimp and created templates and automated emails.'
-                    ]
-                  }
+                  'I contributed to reducing the company’s booking engine expense from around 400k per year down to around 50k per year after the initial investment of around 200k to build an in-house software. My contributions were getting a team together to start the project and my role was to build and design the client facing side of the application.',
+                  'I enabled the company to make data driven decisions by visualizing their KPIs now that they own their data with their in-house booking engine. I also setup additional tracking softwares to provide the team with more insights.',
+                  'I helped increase the Operation Department’s efficiency by programming features for the booking engine that optimizes their workflow. This allowed the company to cater to more customers while keeping the same staff count.',
+                  'I improved their marketing site performance by  migrating it from a dynamic WordPress setup to a static generated one which decreased load time significantly.',
+                  'I enabled marketers and other staff to manage campaign assets and site content by configuring a headless CMS.',
+                  'I reduced the cost of third-party softwares and increased staff productivity when I analyzed what the company needed and initiated replacing existing softwares with better fits.',
+                  'I architected the company sites to be more maintainable by extracting reusable components and shared functionalities into modules and writing tests for core functionalities.',
+                  'I contributed in the increase in revenue by optimizing the checkout flow in collaboration with the analytics team.'
                 ]
               }
             ]
@@ -97,20 +60,12 @@
                 end_date: 'May 2017',
                 description: 'ShopKeep is a software development company working on a point-of-sale application for iOS devices.',
                 contributions: [
-                  {
-                    header: 'I was the lead developer for ShopKeep’s creative and marketing team.',
-                    examples: [
-                      'Maintained and built new functionalities for their marketing site. (www.shopkeep.com)',
-                      'Managed and maintained their e-commerce hardware site. (shop.shopkeep.com)',
-                      'Developed the front-end of their gift card micro-site. (www.ecardsystems.com/shopkeep)',
-                      'Developed the front-end of their lead capture micro-site. (www.possoftwareguide.com/find-your-pos)',
-                      'Setup A/B testing to help the marketing team measure performance of new layouts and features.',
-                      'Setup Google Analytics to improve tracking and provide better data for the marketing team.',
-                      'Setup e2e tests to automate regression testing for key pages.',
-                      'Contributed in improving performance for some of the key pages of the marketing site.',
-                      'Implemented twig templating engine for the marketing site to improve code readability and maintainability.'
-                    ]
-                  }
+                  'I contributed to improving lead conversion by setting up A/B test experiments in collaboration with the marketing team.',
+                  'I improved site performance by setting up Gulp tasks to optimize CSS and JavaScript. I also created a batch image optimizing CLI to easily optimize images being used in the site.',
+                  'I contributed with improving site tracking and giving the marketing more control by setting up Data Layer which enabled the team to make better data-driven decisions.',
+                  'I improved developer productivity by replacing the Visual Composer workflow with Twig which allowed developers to have more control on the pages being built.',
+                  'I contributed to improving site design and usability by rebuilding core pages and implementing the new brand style guide.',
+                  'I reduced bugs left uncaught by setting up automated tests to run prior to deploying.'
                 ]
               }
             ]
@@ -124,14 +79,9 @@
                 start_date: 'March 2015',
                 end_date: 'March 2016',
                 contributions: [
-                  {
-                    header: 'I assisted the lead developer and lead designer with their projects.',
-                    examples: [
-                      'Designed and developed landing pages used for marketing campaigns.',
-                      'Created visual assets for presentations, blog posts and other marketing materials.',
-                      'Developed the redesigned blog posts and blog homepage. (www.shopkeep.com/blog)'
-                    ]
-                  }
+                  'I improved the blog’s performance by rebuilding it. I also restructured the content to improve SEO.',
+                  'I improved the marketing site’s responsiveness by implementing a grid system.',
+                  'I contributed to the design of the new pages and built landing pages to test their effectiveness.'
                 ]
               }
             ]
@@ -146,13 +96,8 @@
                 end_date: 'March 2015',
                 description: 'Magnet Media Films is a content marketing solutions industry leader who created stunning videos for clients such as Google, Microsoft and Good Technology.',
                 contributions: [
-                  {
-                    header: 'I assisted the Art Director with day to day tasks as well as client projects.',
-                    examples: [
-                      'Created visual assets for presentations and other marketing materials.',
-                      'Redesigned and developed their marketing website.'
-                    ]
-                  }
+                  'I created visual assets for presentations and other marketing materials.',
+                  'I redesigned and developed their marketing website.'
                 ]
               }
             ]

@@ -57,10 +57,10 @@
             image: '/screen-flynyon-homepage.jpg',
             description: 'FlyNYON is an e-commerce website that sells doors-off helicopter photography flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',
             responsibilities: [
-              'Assisted with the design of the UI components',
+              'Built and tested the UI components',
               'Built the front-end of the website from the ground up',
-              'Setup analytics tooling per marketing requirements',
-              'Maintained the website as business requirements change',
+              'Setup analytics per marketing requirements',
+              'Updated the website as business requirements change',
               'Wrote integration tests and e2e test for core functionalities'
             ],
             technologies: [
@@ -96,7 +96,7 @@
             description: 'The NYON Dash is the internal admin dashboard used by staff to manage flights, products, orders, discounts, etc..',
             responsibilities: [
               'Designed and built all the views',
-              'Maintain and add features per business requirement'
+              'Maintained and added features per business requirement'
             ],
             technologies: [
               {
@@ -124,11 +124,11 @@
           {
             link: 'https://www.flyfoxtrot.com',
             image: '/screen-foxtrot-homepage.jpg',
-            description: 'FlyFoxtrot is an e-commerce website that sells charter helicopter flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',
+            description: 'Foxtrot is an e-commerce website that sells charter helicopter flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',
             responsibilities: [
-              'Assisted with the design of the UI components',
+              'Built and tested the UI components',
               'Built the front-end of the website from the ground up',
-              'Setup analytics tooling per marketing requirements',
+              'Setup analytics per marketing requirements',
               'Updated the website as business requirements change'
             ],
             technologies: [
@@ -196,7 +196,7 @@
             image: '/screen-shopkeep-blog.jpg',
             description: 'The Small Business Hub is ShopKeep\'s blog channel that contains content regarding POS systems and small businesses.',
             responsibilities: [
-              'Rebuilt core pages of the site using TWIG templating engine',
+              'Rebuilt core pages of the site using Twig templating engine',
               'Setup analytics tooling per marketing requirements',
               'Setup A/B tests to measure performance of changes',
               'Built custom landing pages for various campaigns',

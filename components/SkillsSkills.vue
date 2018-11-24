@@ -13,8 +13,10 @@
         class='c-skills-skills__skill'
       )
         p: strong {{ item.label }}
+        p(v-if='item.description') {{ item.description }}
         ul
           li(
+            v-if='item.items'
             v-for='capability in item.capabilities'
           ) {{ capability }}
 </template>
@@ -29,73 +31,43 @@
             items: [
               {
                 label: 'HTML',
-                capabilities: [
-                  'Able to semantically markup a website for SEO and accessibility.',
-                  'Able to use templating engines (PUG, Twig, Haml) for a reusable and more maintainable markup.'
-                ]
+                year: 2013,
+                description: 'I’m comfortable writing HTML markup and familiar with how it impacts SEO and accessibility. I’m also proficient with using number of templating engines (PUG, Twig, Haml) to write more reusable and maintainable markup.'
               },
               {
                 label: 'CSS',
-                capabilities: [
-                  'Understanding of the importance of having a structured naming convention for improved readability and consistency of the codebase.',
-                  'Understanding of the mobile first methodology to address a project’s responsive needs.',
-                  'Able to setup and use preprocessors to improve style reusability and maintainability.',
-                  'Able to use CSS Frameworks (Bootstrap, Bulma) to quickly prototype ideas.'
-                ]
+                year: 2013,
+                description: 'I’m comfortable using CSS on its own or using preprocessors like SCSS or Stylus. I also understand the importance of having a structure naming convention for readability, reusability and handling scope. When I write CSS, I write in a mobile first approach to address responsive needs right away.'
               },
               {
                 label: 'JavaScript',
-                capabilities: [
-                  'Understanding of ES5 and ES6 concepts, capabilities and nuances to use it effectively.',
-                  'Able to use Nuxt.js Framework to get a Vue based static site or SPA started quickly.',
-                  'Understanding of Node.js to create cloudbased functions which works well when building dynamic functionalities for static sites.',
-                  'Experience setting up bundlers and task runners to automate workflows.',
-                  'Experience with a multitude of libraries such as underscore, moment and axios to name a few.'
-                ]
+                year: 2014,
+                description: 'I’m proficient with writing vanilla JS. I’m also comfortable working with modern frameworks. I have the most experience with Vue.js and I’m also familiar with React.js. My expertise is in front-end development but I’m also familiar woking with Node.js to handle server side needs. In addition, I’m also familiar with using common JavaScript tools like npm, Gulp.js, Babel and Webpack.'
               },
               {
-                label: 'Tools',
-                capabilities: [
-                  'Able to use Git to track changess in a project and improve collaboration with other developers.',
-                  'Understanding of how to use SSH to access servers and databases.',
-                  'Able to use bash scripting to improve daily workflow.',
-                  'Experience working with third-party APIs such as Cloudinary, Freshdesk and Google Maps to name a few.'
-                ]
+                label: 'SQL',
+                year: 2017,
+                description: 'I’m comfortable writing select queries to answer business questions with data.'
+              },
+              {
+                label: 'Git',
+                year: 2014,
+                description: 'Git is part of my daily workflow. When working on a new feature, I start a new branch and make my changes in that branch. I’m comfortable cherry-picking commits, rebasing and merging branches. I’m also experienced with git repository hosting services like GitHub, GitLab and Bitbucket.'
+              },
+              {
+                label: 'Testing',
+                year: 2016,
+                description: 'I’m familiar with TDD (Test Driven Development). I’ve used Mocha/Karma to write unit tests and recently picked up Jest. I’ve also used Nightwatch.js, cypress.io and testcafe to write integration and e2e tests. '
+              },
+              {
+                label: 'API',
+                year: 2014,
+                description: 'I’m comfortable interacting with Rest APIs using axios. Some APIs I’ve worked with before are Stripe, MailChimp, Cloudinary and Freshdesk to name a few.'
               },
               {
                 label: 'Project Management',
-                capabilities: [
-                  'Understanding of Agile concepts to build software efficiently and effectively.',
-                  'Experience setting up software project management tools (JIRA, Pivotal Tracker, GitLab) so developers can collaborate better and project managers can track tasks and performance.',
-                  'Experience using Trello and Dapulse to collaborate with non-developer team members.'
-                ]
-              }
-            ]
-          },
-          {
-            label: 'Design',
-            items: [
-              {
-                label: 'Information Architecture',
-                capabilities: [
-                  'Able to create a visual hiearchy to lead the user\'s experience on a webpage.',
-                  'Able to organize content to group relevant information together and lay them out in a coherent way.'
-                ]
-              },
-              {
-                label: 'Ideations/Prototyping',
-                capabilities: [
-                  'Able to create wireframes and prototypes to quickly iterate through ideas and save development time.',
-                  'Able to create mid and hi-fidelity mockups to communicate potential design solutions.'
-                ]
-              },
-              {
-                label: 'Softwares',
-                capabilities: [
-                  'Sketch',
-                  'Adobe Create Suite',
-                  'Marvel, InVision (Prototyping Tools)'
-                ]
+                year: 2014,
+                description: 'I have an understanding of Agile concepts to build software efficiently and effectively. I’ve used tools such as JIRA, Pivotal Tracker and Trello to collaborate with developers and project managers regarding tasks at hand.'
               }
             ]
           },
@@ -104,29 +76,33 @@
             items: [
               {
                 label: 'SEO',
-                capabilities: [
-                  'Understanding of Google’s guidelines to build websites that allows for improved searchability.',
-                  'Experience working with Schema tags so crawlers can categorize the content that exists in a website.'
-                ]
+                year: 2014,
+                description: 'I have an understanding of Google’s guidelines to build websites that allows for improved searchability. I also have experience working with Schema tags so crawlers can categorize the content that exists in a website.'
               },
               {
                 label: 'A/B Testing',
-                capabilities: [
-                  'Experience setting up Optimizely and Google Optimize to enable markerters to create experiments.'
-                ]
+                year: 2015,
+                description: 'I have experience setting up Optimizely and Google Optimize to enable marketers to create experiments. I’m also comfortable setting up custom tracking and events.'
               },
               {
                 label: 'Analytics',
-                capabilities: [
-                  'Experience setting up Google Analytics so marketers and business leaders can make data driven decisions.'
-                ]
+                year: 2015,
+                description: 'I have experience setting up Google Analytics with Enhanced Ecommerce so that stakeholders can gain better insights in how the website performs and are able to make data-driven decisions.'
               },
               {
                 label: 'CRMs',
-                capabilities: [
-                  'Experience integrating websites with various CRM tools (Mailchimp, Infusionsoft, Marketo) that help marketers collect leads and build customer profiles and relationships.'
-                ]
+                year: 2015,
+                description: 'I have experience integrating websites with various CRM tools like MailChimp, Infusionsoft and Marketo that help marketers collect leads and build customer profiles and relationships.'
               }
+            ]
+          },
+          {
+            label: 'Softwares',
+            items: [
+              { label: 'VScode/Sublime' },
+              { label: 'Sketch' },
+              { label: 'Photoshop' },
+              { label: 'Illustrator' }
             ]
           }
         ]
