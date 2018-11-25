@@ -1,43 +1,25 @@
 <template lang='pug'>
   section(class='c-home-samples')
     h2(class='h3') Samples
-    no-ssr
-      vue-carousel(
-        autoplay
-        :autoplay-timeout='5000'
-        loop
-        :per-page='1'
+
+    ul(class='c-home-samples__items')
+      li(
+        class='c-home-samples__item'
+        v-for='(sample, index) in samples'
+        :key='index'
       )
-        vue-slide(
-          v-for='(slide, index) in slides'
-          :key='index'
-        )
-          div(class='c-home-samples__slide')
-            div(class='c-home-samples__slide__content')
-              a(:href='slide.link'): strong {{ slide.link }}
-              p(class='c-home-samples__slide__description') {{ slide.description }}
+        a(:href='sample.link')
+          figure(v-if='sample.name' class='c-home-samples__item__main')
+            img(v-if='sample.image' :src='sample.image.src' :alt='sample.image.alt')
+            figcaption {{ sample.name }}
+          div(class='c-home-samples__item__text')
+            div(class='c-home-samples__item__link') {{ sample.link }}
+            div(class='c-home-samples__item__label') Role:
+            div {{ sample.role}}
+            div(class='c-home-samples__item__label') Tech Stack:
+            div
+              span {{ sample.technologies.join(', ') }}
 
-            div(class='c-home-samples__slide__image')
-              a(
-                class='c-slide-link'
-                :href='slide.link'
-                target='_blank'
-              )
-                figure
-                  img(:src='slide.image.src' :alt='slide.image.alt')
-
-            div(class='c-home-samples__slide__additional-info')
-              div(class='c-home-samples__slide__tech-stack')
-                h3(class='h4'): strong Tech Stack
-                dl
-                  template(v-for='tech in slide.technologies')
-                    dt {{ tech.label }}
-                    dd {{ tech.value }}
-
-              div(class='c-home-samples__slide__responsibilities')
-                h4: strong Responsibilities
-                ul
-                  li(v-for='responsibility in slide.responsibilities') {{ responsibility}}
 </template>
 
 <script>
@@ -51,178 +33,80 @@
 
     data () {
       return {
-        slides: [
+        samples: [
           {
             link: 'https://www.flynyon.com',
+            name: 'FlyNYON Website',
             image: {src: '/screen-flynyon-homepage.jpg', alt: 'FlyNYON Homepage'},
-            description: 'FlyNYON is an e-commerce website that sells doors-off helicopter photography flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',
-            responsibilities: [
-              'Built and tested the UI components',
-              'Built the front-end of the website from the ground up',
-              'Setup analytics per marketing requirements',
-              'Updated the website as business requirements change',
-              'Wrote integration tests and e2e test for core functionalities'
-            ],
+            role: 'Front End Developer',
             technologies: [
-              {
-                label: 'JavaScript Framework',
-                value: 'Vue.js/Nuxt.js'
-              },
-              {
-                label: 'Templating Engine',
-                value: 'PUG'
-              },
-              {
-                label: 'CSS Preprocessor',
-                value: 'SCSS'
-              },
-              {
-                label: 'Hosting',
-                value: 'Netlify'
-              },
-              {
-                label: 'Backend',
-                value: 'Ruby on Rails hosted in Heroku'
-              },
-              {
-                label: 'Headless CMS',
-                value: 'Contentful'
-              }
+              'Vue.js/Nuxt.js',
+              'PUG',
+              'SCSS',
+              'Rails',
+              'SQL'
             ]
           },
           {
             link: '/case-studies/nyonair-dashboard',
+            name: 'NYON Dash',
             image: {src: '/screen-nyon-dash-flights.jpg', alt: 'NYON Dash Flights'},
-            description: 'The NYON Dash is the internal admin dashboard used by staff to manage flights, products, orders, discounts, etc..',
-            responsibilities: [
-              'Designed and built all the views',
-              'Maintained and added features per business requirement'
-            ],
+            role: 'Front End Developer',
             technologies: [
-              {
-                label: 'JavaScript Framework',
-                value: 'Vue.js/Nuxt.js'
-              },
-              {
-                label: 'Templating Engine',
-                value: 'PUG'
-              },
-              {
-                label: 'CSS Preprocessor',
-                value: 'SCSS'
-              },
-              {
-                label: 'Hosting',
-                value: 'Netlify'
-              },
-              {
-                label: 'Backend',
-                value: 'Ruby on Rails hosted in Heroku'
-              }
+              'Vue.js/Nuxt.js',
+              'PUG',
+              'SCSS',
+              'Rails',
+              'SQL'
             ]
           },
           {
             link: 'https://www.flyfoxtrot.com',
-            image: {src: '/screen-foxtrot-homepage.jpg', alt: 'Foxtrot Homepage'},
-            description: 'Foxtrot is an e-commerce website that sells charter helicopter flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',
-            responsibilities: [
-              'Built and tested the UI components',
-              'Built the front-end of the website from the ground up',
-              'Setup analytics per marketing requirements',
-              'Updated the website as business requirements change'
-            ],
+            name: 'FlyFoxtrot Website',
+            image: {src: '/screen-foxtrot-homepage.jpg', alt: 'FlyFoxtrot Homepage'},
+            role: 'Front End Developer',
             technologies: [
-              {
-                label: 'JavaScript Framework',
-                value: 'Vue.js/Nuxt.js'
-              },
-              {
-                label: 'Templating Engine',
-                value: 'PUG'
-              },
-              {
-                label: 'CSS Preprocessor',
-                value: 'SCSS'
-              },
-              {
-                label: 'Hosting',
-                value: 'Netlify'
-              },
-              {
-                label: 'Backend',
-                value: 'Ruby on Rails hosted in Heroku'
-              }
+              'Vue.js/Nuxt.js',
+              'PUG',
+              'SCSS',
+              'Rails',
+              'SQL'
+            ]
+          },
+          {
+            link: 'https://github.com/pcaleja/cli-img-batch',
+            name: 'cli-img-batch',
+            role: 'Developer',
+            technologies: [
+              'JavaScript',
+              'Node.js'
             ]
           },
           {
             link: 'https://www.newyorkonair.com',
+            name: 'New York On Air Website',
             image: {src: '/screen-newyorkonair-homepage.jpg', alt: 'New York On Air Homepage'},
-            description: 'New York On Air is an e-commerce website that sells doors-on helicopter photography flights. The site is setup to be an isomorphic website where the front-end is a separate code base from the back-end.',
-            responsibilities: [
-              'Assisted with the design of the UI components',
-              'Built the front-end of the website from the ground up',
-              'Setup analytics tooling per marketing requirements',
-              'Updated the website as business requirements change'
-            ],
+            role: 'Front End Developer',
             technologies: [
-              {
-                label: 'JavaScript Framework',
-                value: 'Vue.js/Nuxt.js'
-              },
-              {
-                label: 'Templating Engine',
-                value: 'PUG'
-              },
-              {
-                label: 'CSS Preprocessor',
-                value: 'SCSS'
-              },
-              {
-                label: 'Hosting',
-                value: 'Netlify'
-              },
-              {
-                label: 'Backend',
-                value: 'Ruby on Rails hosted in Heroku'
-              },
-              {
-                label: 'Headless CMS',
-                value: 'Contentful'
-              }
+              'Vue.js/Nuxt.js',
+              'PUG',
+              'SCSS',
+              'Rails',
+              'SQL'
             ]
           },
           {
-            link: 'https://www.shopkeep.com/blog',
-            image: {src: '/screen-shopkeep-blog.jpg', alt: 'ShopKeep Blog Page'},
-            description: 'The Small Business Hub is ShopKeep\'s blog channel that contains content regarding POS systems and small businesses.',
-            responsibilities: [
-              'Rebuilt core pages of the site using Twig templating engine',
-              'Setup analytics tooling per marketing requirements',
-              'Setup A/B tests to measure performance of changes',
-              'Built custom landing pages for various campaigns',
-              'Improved site performance overtime'
-            ],
+            link: 'https://www.shopkeep.com',
+            name: 'ShopKeep Website',
+            image: {src: '/screen-shopkeep-blog.jpg', alt: 'ShopKeep Blog'},
+            role: 'Front End Developer',
             technologies: [
-              {
-                label: 'Framework',
-                value: 'Wordpress'
-              },
-              {
-                label: 'Templating Engine',
-                value: 'Twig'
-              },
-              {
-                label: 'CSS Preprocessor',
-                value: 'SCSS'
-              },
-              {
-                label: 'JavaScript Toolkit',
-                value: 'Gulp'
-              },
-              {
-                label: 'Hosting',
-                value: 'WP Engine'
-              }
+              'WordPress',
+              'PHP',
+              'Twig',
+              'SCSS',
+              'Gulp',
+              'SQL'
             ]
           }
         ]
@@ -237,67 +121,78 @@
   .c-home-samples {
     padding: 1rem;
 
-    @include breakpoint(xs) {
-      padding: 2rem;
-    }
-
-    &__slide {
+    &__items {
       @extend %flex;
-      @extend %middle;
+      @extend %around;
+      padding: 0;
+    }
 
-      &__image {
-        @extend %col-12;
-      }
+    &__item {
+      @extend %col-12;
+      @extend %col-sm-6;
+      margin-bottom: 1rem;
+      padding: 1rem;
 
-      &__content {
-        @extend %col-12;
+
+      &__text {
+        @include font-size(14);
+        background: $light-off-1;
+        padding: 0.5rem;
         color: $dark-off-2;
+        border-bottom: 2px solid transparent;
+        transition: 0.4s all ease;
       }
 
-      &__additional-info {
-        @extend %flex;
+      &__link {
+        color: $secondary;
       }
 
-      &__tech-stack,
-      &__responsibilities {
-        @extend %col-12;
-        @extend %col-xs-6;
-        color: $dark-off-2;
-        margin-top: 1rem;
-      }
-
-      &__description {
-        margin-bottom: 1rem;
-      }
-
-      ul,
-      dl {
+      &__label {
+        @include font-size(12);
+        font-weight: 600;
         margin-top: 0.5rem;
+        color: $dark-off-2;
       }
 
-      ul {
-        padding-left: 1rem;
+      &__main {
+        @include font-size(20);
+        @extend %flex;
+        @extend %middle;
+        @extend %center;
+        height: 160px;
+        overflow: hidden;
+        background: $primary-dark;
+        color: $light;
+        font-weight: bold;
+        position: relative;
+
+        @include breakpoint(xs) {
+          height: 190px;
+        }
       }
-    }
 
-    .h3 {
-      color: $primary;
-    }
+      img {
+        transition: 0.4s all ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0.4;
+      }
 
-    .c-slide-link {
-      position: relative;
-      display: block;
+      figcaption {
+        position: relative;
+        z-index: 1;
+      }
 
       &:hover {
-        &:after {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background: rgba($primary, 0.5);
+        img {
+          opacity: 0.2;
+        }
+
+        .c-home-samples__item__text {
+          border-bottom: 2px solid $secondary;
         }
       }
     }
