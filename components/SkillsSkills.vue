@@ -32,12 +32,12 @@
               {
                 label: 'HTML',
                 year: 2013,
-                description: 'I’m comfortable writing HTML markup and familiar with how it impacts SEO and accessibility. I’m also proficient with using number of templating engines (PUG, Twig, Haml) to write more reusable and maintainable markup.'
+                description: 'I’m comfortable writing HTML markup and familiar with how it impacts SEO and accessibility. I’m also proficient with using a number of templating engines (PUG, Twig, Haml) to write reusable and maintainable markup.'
               },
               {
                 label: 'CSS',
                 year: 2013,
-                description: 'I’m comfortable using CSS on its own or using preprocessors like SCSS or Stylus. I also understand the importance of having a structure naming convention for readability, reusability and handling scope. When I write CSS, I write in a mobile first approach to address responsive needs right away.'
+                description: 'I’m comfortable using CSS on its own or using preprocessors like SCSS or Stylus. I also understand the importance of having a structure naming convention like BEM for readability, reusability and handling scope. When I write CSS, I write in a mobile first approach to address responsive needs right away.'
               },
               {
                 label: 'JavaScript',

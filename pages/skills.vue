@@ -14,7 +14,7 @@
 
       div
         p: strong TLDR
-        p I have a wide range of skills to improve your business’ web presence and capabilities. Not only can I help you get started with a website, I am also equipped with tools to optmize your website in the long haul.
+        p I have a wide range of skills to improve your business’ web presence and capabilities. Not only can I help you get started with a website, I am also equipped with tools to optimize your website in the long haul.
 
 </template>
 
