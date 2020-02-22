@@ -6,7 +6,7 @@
       :key='index'
       class='c-skills-skills__category'
     )
-      h3(class='h4')(class='c-skills-skills__category__label') {{ skill.label }}
+      h3(class='h4 c-skills-skills__category__label') {{ skill.label }}
       div(
         v-for='(item, index) in skill.items'
         :key='index'

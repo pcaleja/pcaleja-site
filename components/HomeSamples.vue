@@ -35,6 +35,19 @@
       return {
         samples: [
           {
+            link: 'https://www.buydig.com',
+            name: 'BuyDig Website',
+            image: {src: '/screen-buydig-homepage.jpg', alt: 'BuyDig Homepage'},
+            role: 'Web Developer',
+            technologies: [
+              'HTML',
+              'CSS/SCSS',
+              'JavaScript/jQuery',
+              'C#/.NET',
+              'SQL'
+            ]
+          },
+          {
             link: 'https://www.flynyon.com',
             name: 'FlyNYON Website',
             image: {src: '/screen-flynyon-homepage.jpg', alt: 'FlyNYON Homepage'},

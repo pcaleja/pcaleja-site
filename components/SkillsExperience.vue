@@ -29,13 +29,30 @@
       return {
         years: [
           {
+            label: '2020',
+            experiences: [
+              {
+                company: 'Beach Trading',
+                title: 'Web Developer',
+                start_date: 'Dec 2019',
+                end_date: 'Present',
+                description: 'Beach Trading is an e-commerce company that provides amazing deals to its customers',
+                contributions: [
+                  'I contributed to reducing the codebase for www.buydig.com by at least 40% after implementing responsive web design and removing the need for a separate mobile site. I also contributed in  improving  the site\'s accessibility by making it more compliant with WCAG 2.1 Level AA and by using tools like WAVE and Axe.',
+                  'I contributed in sunsetting a 20 year old legacy application that didn\'t have source code by building micro frontend applications that replaces the legacy application\'s functionality. In addition, I made the company’s own UI library that meets business requirements. I also built a few API endpoints using C#, .NET Web API and EF Core.',
+                  'I introduced and helped implement modern software development practices to the team. For example, I initiated the gradual migration from TFS to git. I also used cypress.io to improve e2e testing experience and reduce bugs. Also, I advocated for DevOps and collaborated with IT to implement Docker and Kubernetes'
+                ]
+              }
+            ]
+          },
+          {
             label: '2018',
             experiences: [
               {
                 company: 'NYONair',
                 title: 'Web Developer',
                 start_date: 'May 2017',
-                end_date: 'Present',
+                end_date: 'Dec 2019',
                 description: 'NYONair is an aerial/helicopter company provides aerial photography experiences to the masses.',
                 contributions: [
                   'I contributed to reducing the company’s booking engine expense from around 400k per year down to around 50k per year after the initial investment of around 200k to build an in-house software. My contributions were getting a team together to start the project and my role was to build and design the client facing side of the application.',

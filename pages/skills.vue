@@ -6,7 +6,7 @@
       div(class='c-skills-overview')
         h2(class='h3') Overview
         p I am a front end developer with a background in design and a knack for data. With my skill sets, I am comfortable making both technical and creative data driven decisions to contribute to your team. My forte is building and improving websites aligned with business goals. In addition, I can also build internal tools or procure third party software to increase efficiency and productivity within a company.
-        p My current tech stack consists of HTML, CSS (SCSS) and JavaScript. I use Vue.js as my current JS Framework of choice though I’m familiar with React as well. In addition to my front end skill sets, I also have familiarity with PHP, Node.js and SQL.
+        p My current tech stack consists of HTML, CSS (SCSS) and JavaScript. I use Vue.js as my current JS Framework of choice though I’m familiar with React as well. In addition to my front end skill sets, I also have familiarity with Node.js, C# and SQL.
 
       vue-skills-experience
 
