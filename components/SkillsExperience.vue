@@ -34,7 +34,7 @@
               {
                 company: 'Beach Trading',
                 title: 'Web Developer',
-                start_date: 'Dec 2019',
+                start_date: 'Dec 2018',
                 end_date: 'Present',
                 description: 'Beach Trading is an e-commerce company that provides amazing deals to its customers',
                 contributions: [
@@ -52,7 +52,7 @@
                 company: 'NYONair',
                 title: 'Web Developer',
                 start_date: 'May 2017',
-                end_date: 'Dec 2019',
+                end_date: 'Dec 2018',
                 description: 'NYONair is an aerial/helicopter company provides aerial photography experiences to the masses.',
                 contributions: [
                   'I contributed to reducing the company’s booking engine expense from around 400k per year down to around 50k per year after the initial investment of around 200k to build an in-house software. My contributions were getting a team together to start the project and my role was to build and design the client facing side of the application.',
